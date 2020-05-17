@@ -1,0 +1,6 @@
+framework module Pods_SwiftNavigationFormTestTests {
+  umbrella header "Pods-SwiftNavigationFormTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
