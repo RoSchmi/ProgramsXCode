@@ -8,58 +8,51 @@
 
 import SwiftUI
 
+
 struct Person : Hashable{
     var id: String
     var name: String
     var sign: String
 }
 
-struct PersonView: View {
-var person: Person
- var body: some View {
-     HStack {
-        
-        Text(person.name)
-         
-            Spacer()
-        Text(person.sign)
-                 .font(.subheadline)
-                 .fontWeight(.bold)
-        
-         
-     }.background(LinearGradient(gradient: Gradient(colors:  [Color(.darkGray), Color(.lightGray)]), startPoint: .leading, endPoint: .trailing))
-    }
-}
     
 struct ContentView: View {
-    /*
-    @State var persons:[Person] = [
-    Person(id: "0", name: "Roland", sign: "!!!"),
-    Person(id: "1", name: "Monika", sign: "!!!"),
-    Person(id: "2", name: "Klaus", sign: "!!!"),
-    Person(id: "3", name: "Dagmar", sign: "!!!")]
-    */
-   
+    
+    
     @ObservedObject var contentVM = ContentViewModel()
     
     var body: some View {
         
+        
         NavigationView {
             List {
-                ForEach(contentVM.persons, id: \.self) {person in
-                    PersonView(person: person) }
-                .onDelete(perform: delete)                    /*
+                ForEach(contentVM.persons, id: \.self) {selectedPerson in
+                    PersonView(person: selectedPerson)}
+                .onDelete(perform: delete)
+                /*
                     ForEach(persons, id: \.self) {person in
                         PersonView(person: person) }
-                    .onDelete(perform: delete)
-                    */
+                    .onDelete(perform: delete)}
+                */
             }
-            .navigationBarItems(trailing: EditButton())
+            .navigationBarItems(
+                leading: Button(action : showAbout) {
+                    Text("About")
+                },
+                trailing: EditButton())
         }
+    
     }
     
+
+    func showAbout() {
+        var dummy1 = 1
+    }
+    
+    //func delete(at offsets: IndexSet) {
+     //   self.showingSheet = true    }
     func delete(at offsets: IndexSet) {
-        contentVM.persons.remove(atOffsets: offsets)
+       contentVM.persons.remove(atOffsets: offsets)
     }
 }
 

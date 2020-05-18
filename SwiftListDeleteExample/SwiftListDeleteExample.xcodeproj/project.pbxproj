@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE00336C247176D300F366D5 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE00336B247176D300F366D5 /* ContentViewModel.swift */; };
+		CE7D3C632472ED9600A1EE4B /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D3C622472ED9600A1EE4B /* PersonView.swift */; };
 		CEF8C6BB247069190020FF11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C6BA247069190020FF11 /* AppDelegate.swift */; };
 		CEF8C6BD247069190020FF11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C6BC247069190020FF11 /* SceneDelegate.swift */; };
 		CEF8C6C0247069190020FF11 /* SwiftListDeleteExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C6BE247069190020FF11 /* SwiftListDeleteExample.xcdatamodeld */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		CE00336B247176D300F366D5 /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentViewModel.swift; path = model/ContentViewModel.swift; sourceTree = "<group>"; };
+		CE7D3C622472ED9600A1EE4B /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		CEF8C6B7247069190020FF11 /* SwiftListDeleteExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftListDeleteExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF8C6BA247069190020FF11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF8C6BC247069190020FF11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		CE0033662471758A00F366D5 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				CE7D3C622472ED9600A1EE4B /* PersonView.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				CE00336C247176D300F366D5 /* ContentViewModel.swift in Sources */,
 				CEF8C6C2247069190020FF11 /* ContentView.swift in Sources */,
 				CEF8C6BD247069190020FF11 /* SceneDelegate.swift in Sources */,
+				CE7D3C632472ED9600A1EE4B /* PersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

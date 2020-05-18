@@ -9,7 +9,7 @@
 import SwiftUI
 
 class ContentViewModel: ObservableObject {
-    
+   
     
     @Published var persons:[Person] = [
     Person(id: "0", name: "Roland", sign: "!!!"),
