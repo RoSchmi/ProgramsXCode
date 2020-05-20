@@ -19,12 +19,12 @@ struct HostsView: View {
         
     @ObservedObject var hostModel = HostsModel()
     
-    var disconnected: Bool = true
+    
     
     var body: some View {
                 
         NavigationView {
-            HStack {
+                    
             VStack(alignment: .leading) {
                 List {
                     
@@ -36,30 +36,13 @@ struct HostsView: View {
                     }
                 
                     }
-            }
-            /*
-            .contextMenu {
-            MenuButton(title: "Edit", systemImage: "pencil.circle", action: editHost)
-            //if host.state != .disconnected {
-            if .disconnected {
-                MenuButton(title: "Disconnect", systemImage: "stop.circle", action: disconnect)
-            }
-            else {
-                MenuButton(title: "Connect", systemImage: "play.circle", action: connect)
-            }
-            
-                }
-                */
-                
+        
             
         }
         
     }
     
-    func disconnect() {}
-    
-    func editHost() {}
-    
+   
     
     func delete(at offsets: IndexSet) {
         hostModel.persons.remove(atOffsets: offsets)
