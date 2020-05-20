@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct DetailView: View {
+    
     var selectedUser : User
+    
         var body: some View {
             Text(selectedUser.lastName)
                 .font(.largeTitle)

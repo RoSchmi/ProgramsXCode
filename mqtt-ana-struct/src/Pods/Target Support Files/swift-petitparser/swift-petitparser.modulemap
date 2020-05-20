@@ -1,0 +1,6 @@
+framework module swift_petitparser {
+  umbrella header "swift-petitparser-umbrella.h"
+
+  export *
+  module * { export * }
+}
