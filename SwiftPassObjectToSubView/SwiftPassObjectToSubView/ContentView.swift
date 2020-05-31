@@ -1,3 +1,8 @@
+// This example is from 
+/* https://stackoverflow.com/questions/57551220/passing-an-observedobject-to-nested-child-views-swiftui-swiftui-data-flow
+*/
+
+
 //
 //  ContentView.swift
 //  SwiftPassObjectToSubView
