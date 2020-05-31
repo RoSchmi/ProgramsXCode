@@ -19,6 +19,7 @@ struct ContentView: View {
     var body: some View {
         let user1 = User(id: 1, firstName: "Piper", lastName: "Chapman Yay")
         let user2 = User(id: 2, firstName: "Gloria", lastName: "Mendoza")
+        
         let users = [user1, user2]
 
         return NavigationView {

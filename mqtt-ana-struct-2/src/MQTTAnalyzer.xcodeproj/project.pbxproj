@@ -1,0 +1,883 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D72D10FA3E26E1DBEC518F9 /* Pods_MQTTAnalyzerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6623CCFD1588474682B74B /* Pods_MQTTAnalyzerTests.framework */; };
+		933619F55AD9EFDF08C00D29 /* Pods_MQTTAnalyzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F30E4F8EFF715253585FB5 /* Pods_MQTTAnalyzer.framework */; };
+		CE45B7002473FE62006D9184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B6FF2473FE62006D9184 /* AppDelegate.swift */; };
+		CE45B7022473FE62006D9184 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B7012473FE62006D9184 /* SceneDelegate.swift */; };
+		CE45B7052473FE62006D9184 /* MQTTAnalyzer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE45B7032473FE62006D9184 /* MQTTAnalyzer.xcdatamodeld */; };
+		CE45B7092473FE63006D9184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE45B7082473FE63006D9184 /* Assets.xcassets */; };
+		CE45B70C2473FE63006D9184 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE45B70B2473FE63006D9184 /* Preview Assets.xcassets */; };
+		CE45B70F2473FE63006D9184 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE45B70D2473FE63006D9184 /* LaunchScreen.storyboard */; };
+		CE45B71A2473FE63006D9184 /* MQTTAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B7192473FE63006D9184 /* MQTTAnalyzerTests.swift */; };
+		CE45B7252473FE63006D9184 /* MQTTAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B7242473FE63006D9184 /* MQTTAnalyzerUITests.swift */; };
+		CE45B7362474016D006D9184 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B7352474016D006D9184 /* RootView.swift */; };
+		CE45B73B247402A1006D9184 /* HostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B73A247402A1006D9184 /* HostsView.swift */; };
+		CE45B73E247405D0006D9184 /* RootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B73D247405D0006D9184 /* RootModel.swift */; };
+		CE45B74524744679006D9184 /* MQTTSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B74424744679006D9184 /* MQTTSessionController.swift */; };
+		CE45B74A247451E3006D9184 /* JsonFormatString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B747247451E3006D9184 /* JsonFormatString.swift */; };
+		CE45B74B247451E3006D9184 /* ArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B748247451E3006D9184 /* ArrayUtils.swift */; };
+		CE45B74C247451E3006D9184 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45B749247451E3006D9184 /* StringUtils.swift */; };
+		CE534CD1247C44060097807C /* MqttClientSharedUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CCF247C44060097807C /* MqttClientSharedUtils.swift */; };
+		CE534CD2247C44060097807C /* MqttClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CD0247C44060097807C /* MqttClient.swift */; };
+		CE534CD7247C44800097807C /* CocoaMQTTCertificateFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CD4247C44800097807C /* CocoaMQTTCertificateFiles.swift */; };
+		CE534CD8247C44800097807C /* MQTTDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CD5247C44800097807C /* MQTTDelegate.swift */; };
+		CE534CD9247C44800097807C /* CocoaMQTTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CD6247C44800097807C /* CocoaMQTTClient.swift */; };
+		CE534CDD247C44DD0097807C /* MoscapsuleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CDB247C44DD0097807C /* MoscapsuleClient.swift */; };
+		CE534CDE247C44DD0097807C /* MoscapsuleCertificateFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CDC247C44DD0097807C /* MoscapsuleCertificateFiles.swift */; };
+		CE534CE4247C780C0097807C /* HostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CDF247C780C0097807C /* HostModel.swift */; };
+		CE534CE5247C780C0097807C /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CE0247C780C0097807C /* MessageModel.swift */; };
+		CE534CE6247C780C0097807C /* MessagesByTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CE1247C780C0097807C /* MessagesByTopic.swift */; };
+		CE534CE7247C780C0097807C /* Multimap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CE2247C780C0097807C /* Multimap.swift */; };
+		CE534CE8247C780C0097807C /* HostSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CE3247C780C0097807C /* HostSetting.swift */; };
+		CE534CEB247C78200097807C /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CE9247C78200097807C /* TopicModel.swift */; };
+		CE534CEC247C78200097807C /* Readstate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE534CEA247C78200097807C /* Readstate.swift */; };
+		CE8C091024753A07004B521C /* TopicsTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C090F24753A07004B521C /* TopicsTestView.swift */; };
+		CE8C091424755CCF004B521C /* HostCellTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C091324755CCF004B521C /* HostCellTestView.swift */; };
+		CE8C091B247598D9004B521C /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C0917247598D9004B521C /* MenuButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE45B7162473FE63006D9184 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE45B6F42473FE62006D9184 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE45B6FB2473FE62006D9184;
+			remoteInfo = MQTTAnalyzer;
+		};
+		CE45B7212473FE63006D9184 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE45B6F42473FE62006D9184 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE45B6FB2473FE62006D9184;
+			remoteInfo = MQTTAnalyzer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00CC4DE4E7E815B3B274E5BC /* Pods-MQTTAnalyzer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQTTAnalyzer.debug.xcconfig"; path = "Target Support Files/Pods-MQTTAnalyzer/Pods-MQTTAnalyzer.debug.xcconfig"; sourceTree = "<group>"; };
+		279EE63A6E2EE86267E62021 /* Pods-MQTTAnalyzerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQTTAnalyzerTests.debug.xcconfig"; path = "Target Support Files/Pods-MQTTAnalyzerTests/Pods-MQTTAnalyzerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		36F30E4F8EFF715253585FB5 /* Pods_MQTTAnalyzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQTTAnalyzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB6623CCFD1588474682B74B /* Pods_MQTTAnalyzerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQTTAnalyzerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE45B6FC2473FE62006D9184 /* MQTTAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQTTAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE45B6FF2473FE62006D9184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE45B7012473FE62006D9184 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE45B7042473FE62006D9184 /* MQTTAnalyzer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MQTTAnalyzer.xcdatamodel; sourceTree = "<group>"; };
+		CE45B7082473FE63006D9184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE45B70B2473FE63006D9184 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE45B70E2473FE63006D9184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE45B7102473FE63006D9184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE45B7152473FE63006D9184 /* MQTTAnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MQTTAnalyzerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE45B7192473FE63006D9184 /* MQTTAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTAnalyzerTests.swift; sourceTree = "<group>"; };
+		CE45B71B2473FE63006D9184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE45B7202473FE63006D9184 /* MQTTAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MQTTAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE45B7242473FE63006D9184 /* MQTTAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTAnalyzerUITests.swift; sourceTree = "<group>"; };
+		CE45B7262473FE63006D9184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE45B7352474016D006D9184 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootView.swift; path = views/RootView.swift; sourceTree = "<group>"; };
+		CE45B73A247402A1006D9184 /* HostsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HostsView.swift; path = views/host/HostsView.swift; sourceTree = "<group>"; };
+		CE45B73D247405D0006D9184 /* RootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModel.swift; sourceTree = "<group>"; };
+		CE45B74424744679006D9184 /* MQTTSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTTSessionController.swift; sourceTree = "<group>"; };
+		CE45B747247451E3006D9184 /* JsonFormatString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFormatString.swift; sourceTree = "<group>"; };
+		CE45B748247451E3006D9184 /* ArrayUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayUtils.swift; sourceTree = "<group>"; };
+		CE45B749247451E3006D9184 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		CE534CCF247C44060097807C /* MqttClientSharedUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MqttClientSharedUtils.swift; sourceTree = "<group>"; };
+		CE534CD0247C44060097807C /* MqttClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MqttClient.swift; sourceTree = "<group>"; };
+		CE534CD4247C44800097807C /* CocoaMQTTCertificateFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CocoaMQTTCertificateFiles.swift; path = cocoamqtt/CocoaMQTTCertificateFiles.swift; sourceTree = "<group>"; };
+		CE534CD5247C44800097807C /* MQTTDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MQTTDelegate.swift; path = cocoamqtt/MQTTDelegate.swift; sourceTree = "<group>"; };
+		CE534CD6247C44800097807C /* CocoaMQTTClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CocoaMQTTClient.swift; path = cocoamqtt/CocoaMQTTClient.swift; sourceTree = "<group>"; };
+		CE534CDB247C44DD0097807C /* MoscapsuleClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoscapsuleClient.swift; path = moscapsule/MoscapsuleClient.swift; sourceTree = "<group>"; };
+		CE534CDC247C44DD0097807C /* MoscapsuleCertificateFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoscapsuleCertificateFiles.swift; path = moscapsule/MoscapsuleCertificateFiles.swift; sourceTree = "<group>"; };
+		CE534CDF247C780C0097807C /* HostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HostModel.swift; path = model/HostModel.swift; sourceTree = "<group>"; };
+		CE534CE0247C780C0097807C /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageModel.swift; path = model/MessageModel.swift; sourceTree = "<group>"; };
+		CE534CE1247C780C0097807C /* MessagesByTopic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesByTopic.swift; path = model/MessagesByTopic.swift; sourceTree = "<group>"; };
+		CE534CE2247C780C0097807C /* Multimap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Multimap.swift; path = model/Multimap.swift; sourceTree = "<group>"; };
+		CE534CE3247C780C0097807C /* HostSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HostSetting.swift; path = model/HostSetting.swift; sourceTree = "<group>"; };
+		CE534CE9247C78200097807C /* TopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicModel.swift; path = model/TopicModel.swift; sourceTree = "<group>"; };
+		CE534CEA247C78200097807C /* Readstate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Readstate.swift; path = model/Readstate.swift; sourceTree = "<group>"; };
+		CE8C090F24753A07004B521C /* TopicsTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TopicsTestView.swift; path = MQTTAnalyzer/TopicsTestView.swift; sourceTree = SOURCE_ROOT; };
+		CE8C091324755CCF004B521C /* HostCellTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HostCellTestView.swift; path = views/host/HostCellTestView.swift; sourceTree = "<group>"; };
+		CE8C0917247598D9004B521C /* MenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuButton.swift; path = views/common/MenuButton.swift; sourceTree = "<group>"; };
+		CF8BD31613E9F92038756139 /* Pods-MQTTAnalyzer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQTTAnalyzer.release.xcconfig"; path = "Target Support Files/Pods-MQTTAnalyzer/Pods-MQTTAnalyzer.release.xcconfig"; sourceTree = "<group>"; };
+		D62B8E3288DCC3DD4B1C2D19 /* Pods-MQTTAnalyzerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQTTAnalyzerTests.release.xcconfig"; path = "Target Support Files/Pods-MQTTAnalyzerTests/Pods-MQTTAnalyzerTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE45B6F92473FE62006D9184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933619F55AD9EFDF08C00D29 /* Pods_MQTTAnalyzer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE45B7122473FE63006D9184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D72D10FA3E26E1DBEC518F9 /* Pods_MQTTAnalyzerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE45B71D2473FE63006D9184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67229F26B3401FA68EDE4908 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36F30E4F8EFF715253585FB5 /* Pods_MQTTAnalyzer.framework */,
+				AB6623CCFD1588474682B74B /* Pods_MQTTAnalyzerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0BA011C8BB375FBC50053BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00CC4DE4E7E815B3B274E5BC /* Pods-MQTTAnalyzer.debug.xcconfig */,
+				CF8BD31613E9F92038756139 /* Pods-MQTTAnalyzer.release.xcconfig */,
+				279EE63A6E2EE86267E62021 /* Pods-MQTTAnalyzerTests.debug.xcconfig */,
+				D62B8E3288DCC3DD4B1C2D19 /* Pods-MQTTAnalyzerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE45B6F32473FE62006D9184 = {
+			isa = PBXGroup;
+			children = (
+				CE45B6FE2473FE62006D9184 /* MQTTAnalyzer */,
+				CE45B7182473FE63006D9184 /* MQTTAnalyzerTests */,
+				CE45B7232473FE63006D9184 /* MQTTAnalyzerUITests */,
+				CE45B6FD2473FE62006D9184 /* Products */,
+				B0BA011C8BB375FBC50053BC /* Pods */,
+				67229F26B3401FA68EDE4908 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE45B6FD2473FE62006D9184 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE45B6FC2473FE62006D9184 /* MQTTAnalyzer.app */,
+				CE45B7152473FE63006D9184 /* MQTTAnalyzerTests.xctest */,
+				CE45B7202473FE63006D9184 /* MQTTAnalyzerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE45B6FE2473FE62006D9184 /* MQTTAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				CE45B74624745186006D9184 /* extensions */,
+				CE45B74324744615006D9184 /* mqtt */,
+				CE45B73C247405A6006D9184 /* model */,
+				CE45B732247400D4006D9184 /* views */,
+				CE45B6FF2473FE62006D9184 /* AppDelegate.swift */,
+				CE45B7012473FE62006D9184 /* SceneDelegate.swift */,
+				CE45B7082473FE63006D9184 /* Assets.xcassets */,
+				CE45B70D2473FE63006D9184 /* LaunchScreen.storyboard */,
+				CE45B7102473FE63006D9184 /* Info.plist */,
+				CE45B7032473FE62006D9184 /* MQTTAnalyzer.xcdatamodeld */,
+				CE45B70A2473FE63006D9184 /* Preview Content */,
+			);
+			path = MQTTAnalyzer;
+			sourceTree = "<group>";
+		};
+		CE45B70A2473FE63006D9184 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CE45B70B2473FE63006D9184 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE45B7182473FE63006D9184 /* MQTTAnalyzerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE45B7192473FE63006D9184 /* MQTTAnalyzerTests.swift */,
+				CE45B71B2473FE63006D9184 /* Info.plist */,
+			);
+			path = MQTTAnalyzerTests;
+			sourceTree = "<group>";
+		};
+		CE45B7232473FE63006D9184 /* MQTTAnalyzerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE45B7242473FE63006D9184 /* MQTTAnalyzerUITests.swift */,
+				CE45B7262473FE63006D9184 /* Info.plist */,
+			);
+			path = MQTTAnalyzerUITests;
+			sourceTree = "<group>";
+		};
+		CE45B732247400D4006D9184 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C0915247598BB004B521C /* common */,
+				CE8C090E24753982004B521C /* topic */,
+				CE45B7392474024F006D9184 /* host */,
+				CE45B7352474016D006D9184 /* RootView.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		CE45B7392474024F006D9184 /* host */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C091324755CCF004B521C /* HostCellTestView.swift */,
+				CE45B73A247402A1006D9184 /* HostsView.swift */,
+			);
+			name = host;
+			sourceTree = "<group>";
+		};
+		CE45B73C247405A6006D9184 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CE534CEA247C78200097807C /* Readstate.swift */,
+				CE534CE9247C78200097807C /* TopicModel.swift */,
+				CE534CDF247C780C0097807C /* HostModel.swift */,
+				CE534CE3247C780C0097807C /* HostSetting.swift */,
+				CE534CE0247C780C0097807C /* MessageModel.swift */,
+				CE534CE1247C780C0097807C /* MessagesByTopic.swift */,
+				CE534CE2247C780C0097807C /* Multimap.swift */,
+				CE45B73D247405D0006D9184 /* RootModel.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		CE45B74324744615006D9184 /* mqtt */ = {
+			isa = PBXGroup;
+			children = (
+				CE534CDA247C44B20097807C /* moscapsule */,
+				CE534CD3247C441C0097807C /* cocoamqtt */,
+				CE534CD0247C44060097807C /* MqttClient.swift */,
+				CE534CCF247C44060097807C /* MqttClientSharedUtils.swift */,
+				CE45B74424744679006D9184 /* MQTTSessionController.swift */,
+			);
+			path = mqtt;
+			sourceTree = "<group>";
+		};
+		CE45B74624745186006D9184 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE45B748247451E3006D9184 /* ArrayUtils.swift */,
+				CE45B747247451E3006D9184 /* JsonFormatString.swift */,
+				CE45B749247451E3006D9184 /* StringUtils.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		CE534CD3247C441C0097807C /* cocoamqtt */ = {
+			isa = PBXGroup;
+			children = (
+				CE534CD4247C44800097807C /* CocoaMQTTCertificateFiles.swift */,
+				CE534CD6247C44800097807C /* CocoaMQTTClient.swift */,
+				CE534CD5247C44800097807C /* MQTTDelegate.swift */,
+			);
+			name = cocoamqtt;
+			sourceTree = "<group>";
+		};
+		CE534CDA247C44B20097807C /* moscapsule */ = {
+			isa = PBXGroup;
+			children = (
+				CE534CDC247C44DD0097807C /* MoscapsuleCertificateFiles.swift */,
+				CE534CDB247C44DD0097807C /* MoscapsuleClient.swift */,
+			);
+			name = moscapsule;
+			sourceTree = "<group>";
+		};
+		CE8C090E24753982004B521C /* topic */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C090F24753A07004B521C /* TopicsTestView.swift */,
+			);
+			path = topic;
+			sourceTree = "<group>";
+		};
+		CE8C0915247598BB004B521C /* common */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C0917247598D9004B521C /* MenuButton.swift */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE45B6FB2473FE62006D9184 /* MQTTAnalyzer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE45B7292473FE63006D9184 /* Build configuration list for PBXNativeTarget "MQTTAnalyzer" */;
+			buildPhases = (
+				8999BB6AC6D1C4DD2920A6F7 /* [CP] Check Pods Manifest.lock */,
+				CE45B6F82473FE62006D9184 /* Sources */,
+				CE45B6F92473FE62006D9184 /* Frameworks */,
+				CE45B6FA2473FE62006D9184 /* Resources */,
+				8AA5982DADBE4F24F7516366 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MQTTAnalyzer;
+			productName = MQTTAnalyzer;
+			productReference = CE45B6FC2473FE62006D9184 /* MQTTAnalyzer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE45B7142473FE63006D9184 /* MQTTAnalyzerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE45B72C2473FE63006D9184 /* Build configuration list for PBXNativeTarget "MQTTAnalyzerTests" */;
+			buildPhases = (
+				1505E24CADCE8E49C542B7DA /* [CP] Check Pods Manifest.lock */,
+				CE45B7112473FE63006D9184 /* Sources */,
+				CE45B7122473FE63006D9184 /* Frameworks */,
+				CE45B7132473FE63006D9184 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE45B7172473FE63006D9184 /* PBXTargetDependency */,
+			);
+			name = MQTTAnalyzerTests;
+			productName = MQTTAnalyzerTests;
+			productReference = CE45B7152473FE63006D9184 /* MQTTAnalyzerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE45B71F2473FE63006D9184 /* MQTTAnalyzerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE45B72F2473FE63006D9184 /* Build configuration list for PBXNativeTarget "MQTTAnalyzerUITests" */;
+			buildPhases = (
+				CE45B71C2473FE63006D9184 /* Sources */,
+				CE45B71D2473FE63006D9184 /* Frameworks */,
+				CE45B71E2473FE63006D9184 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE45B7222473FE63006D9184 /* PBXTargetDependency */,
+			);
+			name = MQTTAnalyzerUITests;
+			productName = MQTTAnalyzerUITests;
+			productReference = CE45B7202473FE63006D9184 /* MQTTAnalyzerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE45B6F42473FE62006D9184 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = RoSchmi;
+				TargetAttributes = {
+					CE45B6FB2473FE62006D9184 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					CE45B7142473FE63006D9184 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = CE45B6FB2473FE62006D9184;
+					};
+					CE45B71F2473FE63006D9184 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = CE45B6FB2473FE62006D9184;
+					};
+				};
+			};
+			buildConfigurationList = CE45B6F72473FE62006D9184 /* Build configuration list for PBXProject "MQTTAnalyzer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE45B6F32473FE62006D9184;
+			productRefGroup = CE45B6FD2473FE62006D9184 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE45B6FB2473FE62006D9184 /* MQTTAnalyzer */,
+				CE45B7142473FE63006D9184 /* MQTTAnalyzerTests */,
+				CE45B71F2473FE63006D9184 /* MQTTAnalyzerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE45B6FA2473FE62006D9184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE45B70F2473FE63006D9184 /* LaunchScreen.storyboard in Resources */,
+				CE45B70C2473FE63006D9184 /* Preview Assets.xcassets in Resources */,
+				CE45B7092473FE63006D9184 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE45B7132473FE63006D9184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE45B71E2473FE63006D9184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1505E24CADCE8E49C542B7DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MQTTAnalyzerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8999BB6AC6D1C4DD2920A6F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MQTTAnalyzer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AA5982DADBE4F24F7516366 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MQTTAnalyzer/Pods-MQTTAnalyzer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MQTTAnalyzer/Pods-MQTTAnalyzer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MQTTAnalyzer/Pods-MQTTAnalyzer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE45B6F82473FE62006D9184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE534CD2247C44060097807C /* MqttClient.swift in Sources */,
+				CE534CD7247C44800097807C /* CocoaMQTTCertificateFiles.swift in Sources */,
+				CE8C091024753A07004B521C /* TopicsTestView.swift in Sources */,
+				CE534CE7247C780C0097807C /* Multimap.swift in Sources */,
+				CE534CE8247C780C0097807C /* HostSetting.swift in Sources */,
+				CE534CDD247C44DD0097807C /* MoscapsuleClient.swift in Sources */,
+				CE45B7002473FE62006D9184 /* AppDelegate.swift in Sources */,
+				CE534CEB247C78200097807C /* TopicModel.swift in Sources */,
+				CE8C091B247598D9004B521C /* MenuButton.swift in Sources */,
+				CE534CDE247C44DD0097807C /* MoscapsuleCertificateFiles.swift in Sources */,
+				CE45B7022473FE62006D9184 /* SceneDelegate.swift in Sources */,
+				CE45B74B247451E3006D9184 /* ArrayUtils.swift in Sources */,
+				CE534CD9247C44800097807C /* CocoaMQTTClient.swift in Sources */,
+				CE534CD8247C44800097807C /* MQTTDelegate.swift in Sources */,
+				CE45B73E247405D0006D9184 /* RootModel.swift in Sources */,
+				CE45B74524744679006D9184 /* MQTTSessionController.swift in Sources */,
+				CE45B7052473FE62006D9184 /* MQTTAnalyzer.xcdatamodeld in Sources */,
+				CE45B73B247402A1006D9184 /* HostsView.swift in Sources */,
+				CE45B74C247451E3006D9184 /* StringUtils.swift in Sources */,
+				CE534CD1247C44060097807C /* MqttClientSharedUtils.swift in Sources */,
+				CE534CE6247C780C0097807C /* MessagesByTopic.swift in Sources */,
+				CE534CE5247C780C0097807C /* MessageModel.swift in Sources */,
+				CE45B74A247451E3006D9184 /* JsonFormatString.swift in Sources */,
+				CE534CE4247C780C0097807C /* HostModel.swift in Sources */,
+				CE8C091424755CCF004B521C /* HostCellTestView.swift in Sources */,
+				CE45B7362474016D006D9184 /* RootView.swift in Sources */,
+				CE534CEC247C78200097807C /* Readstate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE45B7112473FE63006D9184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE45B71A2473FE63006D9184 /* MQTTAnalyzerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE45B71C2473FE63006D9184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE45B7252473FE63006D9184 /* MQTTAnalyzerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE45B7172473FE63006D9184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE45B6FB2473FE62006D9184 /* MQTTAnalyzer */;
+			targetProxy = CE45B7162473FE63006D9184 /* PBXContainerItemProxy */;
+		};
+		CE45B7222473FE63006D9184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE45B6FB2473FE62006D9184 /* MQTTAnalyzer */;
+			targetProxy = CE45B7212473FE63006D9184 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE45B70D2473FE63006D9184 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE45B70E2473FE63006D9184 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE45B7272473FE63006D9184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE45B7282473FE63006D9184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE45B72A2473FE63006D9184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00CC4DE4E7E815B3B274E5BC /* Pods-MQTTAnalyzer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MQTTAnalyzer/Preview Content\"";
+				DEVELOPMENT_TEAM = CSCG36T9XJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MQTTAnalyzer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RoSchmi.com.MQTTAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE45B72B2473FE63006D9184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF8BD31613E9F92038756139 /* Pods-MQTTAnalyzer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MQTTAnalyzer/Preview Content\"";
+				DEVELOPMENT_TEAM = CSCG36T9XJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MQTTAnalyzer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RoSchmi.com.MQTTAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE45B72D2473FE63006D9184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 279EE63A6E2EE86267E62021 /* Pods-MQTTAnalyzerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CSCG36T9XJ;
+				INFOPLIST_FILE = MQTTAnalyzerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RoSchmi.com.MQTTAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MQTTAnalyzer.app/MQTTAnalyzer";
+			};
+			name = Debug;
+		};
+		CE45B72E2473FE63006D9184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D62B8E3288DCC3DD4B1C2D19 /* Pods-MQTTAnalyzerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CSCG36T9XJ;
+				INFOPLIST_FILE = MQTTAnalyzerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RoSchmi.com.MQTTAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MQTTAnalyzer.app/MQTTAnalyzer";
+			};
+			name = Release;
+		};
+		CE45B7302473FE63006D9184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CSCG36T9XJ;
+				INFOPLIST_FILE = MQTTAnalyzerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RoSchmi.com.MQTTAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MQTTAnalyzer;
+			};
+			name = Debug;
+		};
+		CE45B7312473FE63006D9184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CSCG36T9XJ;
+				INFOPLIST_FILE = MQTTAnalyzerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RoSchmi.com.MQTTAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MQTTAnalyzer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE45B6F72473FE62006D9184 /* Build configuration list for PBXProject "MQTTAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE45B7272473FE63006D9184 /* Debug */,
+				CE45B7282473FE63006D9184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE45B7292473FE63006D9184 /* Build configuration list for PBXNativeTarget "MQTTAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE45B72A2473FE63006D9184 /* Debug */,
+				CE45B72B2473FE63006D9184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE45B72C2473FE63006D9184 /* Build configuration list for PBXNativeTarget "MQTTAnalyzerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE45B72D2473FE63006D9184 /* Debug */,
+				CE45B72E2473FE63006D9184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE45B72F2473FE63006D9184 /* Build configuration list for PBXNativeTarget "MQTTAnalyzerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE45B7302473FE63006D9184 /* Debug */,
+				CE45B7312473FE63006D9184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE45B7032473FE62006D9184 /* MQTTAnalyzer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE45B7042473FE62006D9184 /* MQTTAnalyzer.xcdatamodel */,
+			);
+			currentVersion = CE45B7042473FE62006D9184 /* MQTTAnalyzer.xcdatamodel */;
+			path = MQTTAnalyzer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CE45B6F42473FE62006D9184 /* Project object */;
+}
