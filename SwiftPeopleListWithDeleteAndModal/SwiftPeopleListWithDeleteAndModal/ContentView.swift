@@ -28,7 +28,7 @@ struct ContentView: View {
     
     @State var isPresentingAlertModal = false
     @State var isPresentingAddModal = false
-    // This variable make that the Modal View is presented (true) or not (false)
+    // This variable makes that the Modal View is presented (true) or not (false)
     // A button in the NavigationBar toggles this variable
     // This variable has a binding to the Modal Sheet
     
@@ -58,8 +58,6 @@ struct ContentView: View {
             .alert(isPresented: $isPresentingAlertModal) { Alert(title: Text("Are you sure?"), message: Text("There is no undo"), primaryButton: .destructive(Text("Delete")) { print("Deleting")
             }, secondaryButton: .cancel())
             }
-            
-            
             .sheet(isPresented: $isPresentingAddModal, content: {
                     AddModal(isPresented: self.$isPresentingAddModal, didAddPerson: {person in
                         print(person.lastName)
@@ -96,11 +94,11 @@ struct AddModal: View {
                 print("\(self.firstName)")
                 self.didAddPerson(.init(firstName: self.firstName, lastName: self.lastName, jobTitle: "Good teacher"))
             }, label: {
-                Text("Add")
+                Text("Add Person")
             })
             Button(action: {
-                self.isPresented = false
-            }, label: {
+                self.isPresented = false  // 'isPresented' is Binding
+            }, label: {                   // variable bound to                                        // isPresentingAddModal
                 Text("Cancel")
             })
         Spacer()
