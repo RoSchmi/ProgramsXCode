@@ -26,7 +26,13 @@ struct ContentView: View {
         .init(firstName: "Tim", lastName:  "Waiter", jobTitle: "CEO of Pear")
     ]
     
+    @State var isPresentingAlertModal = false
     @State var isPresentingAddModal = false
+    // This variable make that the Modal View is presented (true) or not (false)
+    // A button in the NavigationBar toggles this variable
+    // This variable has a binding to the Modal Sheet
+    
+    
     var body: some View {
         NavigationView {
             List(people) {person in
@@ -34,30 +40,71 @@ struct ContentView: View {
                     self.people.removeAll(where: {$0.id == person.id})
                 })
                 }.navigationBarTitle("People")
-            .navigationBarItems(trailing: Button(action: {
+                
+                .navigationBarItems(leading: Button(action: {
+                    print("Showing Alert Message")
+                    self.isPresentingAlertModal.toggle()
+                },
+                label: {Text("Show Alert")
+                }),
+                trailing: Button(action: {
                 print("Trying to add")
                 self.isPresentingAddModal.toggle()
             },
             label: {Text("Add")
             }))
-                .sheet(isPresented: $isPresentingAddModal, content: {
-                    AddModal(isPresented: self.$isPresentingAddModal)
+                
+                
+            .alert(isPresented: $isPresentingAlertModal) { Alert(title: Text("Are you sure?"), message: Text("There is no undo"), primaryButton: .destructive(Text("Delete")) { print("Deleting")
+            }, secondaryButton: .cancel())
+            }
+            
+            
+            .sheet(isPresented: $isPresentingAddModal, content: {
+                    AddModal(isPresented: self.$isPresentingAddModal, didAddPerson: {person in
+                        print(person.lastName)
+                        self.people.append(person)
+                    })
             })
+            
         }
     }
 }
      
 struct AddModal: View {
     @Binding var isPresented: Bool
+    
+    @State var firstName = ""
+    @State var lastName = ""
+    
+    var didAddPerson: (Person) -> ()
+    
     var body: some View {
         VStack {
+            HStack (spacing: 16) {
+                Text("First Name")
+                TextField("Enter first Name", text: $firstName)
+            }
+            HStack (spacing: 16) {
+                Text("Last Name")
+                TextField("Enter last Name", text: $lastName)
+            }
             Text("Adding a new Person in this Modal")
+            
+            Button(action: {
+                self.isPresented = false
+                print("\(self.firstName)")
+                self.didAddPerson(.init(firstName: self.firstName, lastName: self.lastName, jobTitle: "Good teacher"))
+            }, label: {
+                Text("Add")
+            })
             Button(action: {
                 self.isPresented = false
             }, label: {
                 Text("Cancel")
             })
-        }
+        Spacer()
+    }.padding(.all, 16)   // Padding around VStack
     }
 }
 
