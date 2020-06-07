@@ -39,13 +39,7 @@ class FixedMessage: ObservableObject, Hashable, Identifiable {
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
-        hasher.combine(title)
-        hasher.combine(explanation)
-        hasher.combine(topic)
-        hasher.combine(message)
-        hasher.combine(qos)
-        hasher.combine(retain)
-        hasher.combine(messageType)
+        // Only id is taken as hash (never the same)
         
     }
     init(id: String, title: String, explanation: String, topic: String, message: String, qos: Int, retain: Bool, messageType: MessageType) {
@@ -60,47 +54,55 @@ class FixedMessage: ObservableObject, Hashable, Identifiable {
     }
 }
 
-
-
-/*
-id: String = NSUUID().uuidString,
-name: String
-let pathName: String
-let path: [JSONSubscriptType]
-var value: PublishMessagePropertyValue
-*/
-
 final class FixedMessagesModel: ObservableObject {
     @Published var fixedMessages: [FixedMessage]
     = [
-        FixedMessage(id: "1", title: "Switch Light On", explanation: "None", topic: "#", message: "", qos: 0, retain: false, messageType: MessageType.on_off),
-        FixedMessage(id: "2", title: "Switch Light Off", explanation: "None", topic: "#", message: "", qos: 0, retain: false, messageType: MessageType.on_off),
-        FixedMessage(id: "3", title: "Switch Heating On", explanation: "None", topic: "#", message: "", qos: 0, retain: false, messageType: MessageType.on_off)]
+        FixedMessage(id: NSUUID().uuidString, title: "Switch Light On", explanation: "None", topic: "#", message: "", qos: 0, retain: false, messageType: MessageType.on_off),
+        FixedMessage(id: NSUUID().uuidString, title: "Switch Light Off", explanation: "None", topic: "#", message: "", qos: 0, retain: false, messageType: MessageType.on_off),
+        FixedMessage(id: NSUUID().uuidString, title: "Switch Heating On", explanation: "None", topic: "#", message: "", qos: 0, retain: false, messageType: MessageType.on_off)]
 }
 
 struct ContentView: View {
     
-    @ObservedObject var fixedMessagesModel = FixedMessagesModel()   //
-    
-    @State var isActiveNavigationLink = true
-    @State var navigationLinkLabel = "Heinz"
+    @ObservedObject var fixedMessagesModel = FixedMessagesModel()
     
     var body: some View {
-        return NavigationView {
+        return VStack {
+            HStack {
+                Spacer()
+           Button(action: { self.addRow()}, label: {Text("Add Command")})
+            }
+        NavigationView {
             VStack(alignment: .leading) {
                 List {
-                    ForEach(fixedMessagesModel.fixedMessages, id: \.self) {
-                        SelectedMessage in
-                        PublishFixedMessageCellView( selectedFixedMessage: SelectedMessage, fixedMessagesModel: self.fixedMessagesModel)}
-                        .onDelete(perform: delete)
+                    // means: create 'PublishFixedMessageCellView' for
+                    // each row (identified uniquely by the hash
+                    // of the row 'fixedMesssages' (\.self) or the id
+                    // (\.id) with 3 parameters
+                    ForEach(fixedMessagesModel.fixedMessages, id: \.id) {
+                    SelectedMessage in
+                    PublishFixedMessageCellView(
+                    selectedFixedMessage:SelectedMessage,
+                    fixedMessagesModel: self.fixedMessagesModel,
+                    function_on_grandparent:
+                    self.printMessageFromGrandparent)}
+                    .onDelete(perform: delete)
                 }
             }
-            
         }
         }
+    }
+    func addRow() {
+    let newMessage: FixedMessage = FixedMessage(id: NSUUID().uuidString, title: "Dummy", explanation: "None", topic: "None", message: "None", qos: 0, retain: false, messageType: MessageType.on_off)
+    
+        fixedMessagesModel.fixedMessages.append(newMessage)
+    }
+    
     func delete(at offsets: IndexSet) {
         fixedMessagesModel.fixedMessages.remove(atOffsets: offsets)
-    }    }
+    }
+    func printMessageFromGrandparent() {print("This is message from grandparent")}
+}
 
 
 

@@ -9,44 +9,44 @@
 import SwiftUI
 
 struct PublishFixedMessageDetailView: View {
-    
-    @ObservedObject var fixedMessage: FixedMessage
+       
+    // Note: here fixedMessage is @State
+    // on the parent (CellView) it is @ObservedObject
+    // if it were @ObservedObject here too,  we would have  a circle and the App crashes
+    @State var fixedMessage: FixedMessage
     
     @ObservedObject var fixedMessagesModel: FixedMessagesModel
     
-    //var didAddPerson: (FixedMessage) -> ()
-    
-    //@Binding var type: PublishFixedMessageType
+    var function_on_parent: () -> Void
+    var function_on_grandparent: () -> Void
     
     var body: some View {
         Form {
-            VStack(alignment: HorizontalAlignment.leading) {
+        VStack(alignment: HorizontalAlignment.leading) {
             
-        Section(header: HStack {Text(""); Spacer()}) {
+            Section(header: HStack {Text(""); Spacer()}) {
             Text("")
-        }
-        Section(header: HStack {Text("Title"); Spacer()}) {
-        TextField("#", text: $fixedMessage.title)
-        .disableAutocorrection(true)
-        .autocapitalization(.none)
-        .font(.body)
-        .background(Color.secondary)
-                }
-                            
-        Section(header: HStack {Text("Function"); Spacer()}) {
-        TextField("#", text: $fixedMessage.explanation)
-        .disableAutocorrection(true)
-        .autocapitalization(.none)
-        .font(.body)
-        .background(Color.secondary)
-                }
-        
             }
+            Section(header: HStack {Text("Title"); Spacer()}) {
+                TextField("#", text: $fixedMessage.title)
+                    .disableAutocorrection(true)
+                    .autocapitalization(.none)
+                    .font(.body)
+                    .background(Color.secondary)
+            }
+                            
+            Section(header: HStack {Text("Function"); Spacer()}) {
+                TextField("#", text: $fixedMessage.explanation)
+                    .disableAutocorrection(true)
+                    .autocapitalization(.none)
+                    .font(.body)
+                    .background(Color.secondary)
+            }
+        }
+            Button(action: { self.function_on_parent()}, label: {Text("Cmd to parent")})
+                
+            Button(action: { self.function_on_grandparent()}, label: {Text("Cmd to grandparent")})
+        }
     }
-        Button(action: { self.doCommand()}, label: {Text("Command")})
 }
-    
-    func doCommand() {
-        
-    }
-}
+

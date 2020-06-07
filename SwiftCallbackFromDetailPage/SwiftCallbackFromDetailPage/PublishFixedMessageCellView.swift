@@ -10,28 +10,34 @@ import SwiftUI
 
 struct PublishFixedMessageCellView: View {
     
+   // Note: here selectedFixedMessage is @ObservedObject
+   // on the child (DetailView) it is @State
+   // otherwise we might have a circle and the App crashes
    @ObservedObject var selectedFixedMessage: FixedMessage
     
-    @ObservedObject var fixedMessagesModel: FixedMessagesModel
+   @ObservedObject var fixedMessagesModel: FixedMessagesModel
     
-    
-   //{.init(id: "", title: "", explanation:"", topic: "", message: "", qos: 0, retain: false, messageType: MessageType.on_off)}
+    var function_on_grandparent: () -> Void
     
     var body: some View {
-        PublishFixedMessageDetailView(function: {})
-            
-        NavigationLink(destination: PublishFixedMessageDetailView( fixedMessage: selectedFixedMessage, fixedMessagesModel: fixedMessagesModel)){
-    
+        
+        NavigationLink(destination:
+        PublishFixedMessageDetailView(fixedMessage: selectedFixedMessage, fixedMessagesModel: self.fixedMessagesModel, function_on_parent: {self.printMessageFromParent()}, function_on_grandparent: {self.handOverCommandToGrandparent()})) {
+        
             VStack(alignment: .leading) {
                 HStack {
                     Text("\(selectedFixedMessage.title)")
                     Spacer()
                 }
             }
-            func setViewBackToNil() {print("I am the parent")}}        }
+        }
+        .navigationBarTitle("Commands")
         
+    }
+    func printMessageFromParent() {print("This is message from parent")}
     
+    func handOverCommandToGrandparent(){ self.function_on_grandparent()}
 }
-        
+
 
 
