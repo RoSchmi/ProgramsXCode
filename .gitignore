@@ -32,4 +32,7 @@
 \f0 \cf0 \cb1 /\
 !/
 \f1 \cf2 \cb3 SwiftPeopleListWithDeleteAndModal
-\f0 \cf0 \cb1 /**}
+\f0 \cf0 \cb1 /**\
+\
+!/SwiftPassFunctionRequestToParent/\
+!/SwiftPassFunctionRequestToParent/**}
