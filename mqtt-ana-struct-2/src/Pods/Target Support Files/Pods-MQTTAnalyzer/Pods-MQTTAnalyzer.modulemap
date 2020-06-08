@@ -1,6 +1,0 @@
-framework module Pods_MQTTAnalyzer {
-  umbrella header "Pods-MQTTAnalyzer-umbrella.h"
-
-  export *
-  module * { export * }
-}
