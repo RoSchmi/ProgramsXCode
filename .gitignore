@@ -35,4 +35,10 @@
 \f0 \cf0 \cb1 /**\
 \
 !/SwiftPassFunctionRequestToParent/\
-!/SwiftPassFunctionRequestToParent/**}
+!/SwiftPassFunctionRequestToParent/**\
+\
+!|/SwiftPassFunctionWithParametersFromChildToParent/\
+!/SwiftPassFunctionWithParametersFromChildToParent/**\
+\
+\
+}
