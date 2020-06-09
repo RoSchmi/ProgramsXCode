@@ -1,7 +1,8 @@
 # ProgramsXCode
 
-This repo is only for personal use
-Should not be useful for others
+This repo is mainly for personal use
+It shows some examples I tested to be uses in my projects
+Should not be only of limited use for others
 
 ### SwiftPassFunctionRequestToParent
 This example shows an array 'FixedMessagesModel' of items 'fixedMessage' which are composed of several properties (id, title... and so on).
