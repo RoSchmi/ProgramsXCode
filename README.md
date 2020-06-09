@@ -1,7 +1,7 @@
 # ProgramsXCode
 
-This repo is mainly for personal use
-It shows some examples I tested to be uses in my projects
+This repo is mainly for personal use. 
+It shows some examples I tested to be uses in my projects. 
 Should not be only of limited use for others
 
 ### SwiftPassFunctionRequestToParent
