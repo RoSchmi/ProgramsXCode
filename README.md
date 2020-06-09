@@ -10,3 +10,5 @@ The rows are shown in the form of a NavigationLink. Rows can be deleted (swipe t
 Additionally there are two buttons on the (child) detail View (Cmd to parent) and (Cmd to grandparent). Pressing the first starts 
 a function on its parent view. Pressing the second leads the command back over the parent view to the grandparent view where a print function is initiated.
 
+### SwiftPassFunctionWithParametersFromChildToParent
+Pressing a Button on the Child View starts a print function on the parent view, passes two string parameter
