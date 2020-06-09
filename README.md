@@ -4,7 +4,7 @@ This repo is mainly for personal use.
 It shows some examples I tested to be uses in my projects. 
 Should be only of limited use for others
 
-### SwiftPassFunctionRequestToParent
+### SwiftCallbackFromDetailPage
 This example shows an array 'FixedMessagesModel' of items 'fixedMessage' which are composed of several properties (id, title... and so on).
 The rows are shown in the form of a NavigationLink. Rows can be deleted (swipe to delete) and new rows can be added.
 
