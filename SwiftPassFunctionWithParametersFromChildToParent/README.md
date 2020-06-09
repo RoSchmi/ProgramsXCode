@@ -1,4 +1,4 @@
-#SwiftPassFunctionRequestToParent
+#SwiftPassFunctionWithParametersFromChildToParent
 
 
 ![ScreenShot](https://github.com/RoSchmi/ProgramsXCode/blob/master/SwiftPassFunctionWithParametersFromChildToParent/SwiftPassFunctionWithParametersFromChildToParent/Pictures/PassFunctionWithParametersFromChildToParent.png)
