@@ -1,4 +1,4 @@
-#SwiftPassFunctionRequestToParent
+#SwiftCallParentFunctionFromGrandchild
 
-
-![ScreenShot](https://github.com/RoSchmi/ProgramsXCode/blob/master/SwiftPassFunctionRequestToParent/Pictures/PassFunctionRequestToParent.png)
+Example passes a function to be executed on a parent view and can be initiated from every child and child of child view. 
+Uses environment object
