@@ -67,6 +67,7 @@ final class CommandsModel: ObservableObject {
 */
 
 struct CommandsView: View {
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var model: RootModel
     //@ObservedObject var hostsModel: HostsModel
     //@ObservedObject var commandsModel = CommandsModel()

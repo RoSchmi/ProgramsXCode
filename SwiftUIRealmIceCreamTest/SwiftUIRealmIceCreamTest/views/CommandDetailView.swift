@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct CommandDetailView: View {
-    // Note: here fixedMessage is @State
+    @Environment(\.presentationMode) var presentationMode
+    // Note: here command  is @State
     // on the parent (CellView) it is @ObservedObject
     // if it were @ObservedObject here too,  we would have  a circle and the App crashes
     @State var command: Command
@@ -40,15 +41,36 @@ struct CommandDetailView: View {
                     .font(.body)
                     .background(Color.secondary)
             }
-        }
+            Section(header: HStack {Text("Actions"); Spacer()}) {
+              Text("Send messages to parent or grandparent")
+            }
             
+        }
+            .navigationBarTitle(Text("Command"), displayMode: .inline)
+            //.edgesIgnoringSafeArea(.bottom)
+            //Hide the system back button
+            .navigationBarBackButtonHidden(true)
+            // Add your custom back button here
+            .navigationBarItems(leading: Button(action: { self.updateAndDismiss()
+            }) {
+                HStack {
+                    Image(systemName: "arrow.left.circle")
+                    Text("Go Back")
+                }
+    })
             Button(action: { self.function_on_parent()}, label: {Text("Cmd to parent")})
                 
             Button(action: { self.function_on_grandparent()}, label: {Text("Cmd to grandparent")})
-            
+        
     }
+  
+    
+        
+        
+    }
+    func updateAndDismiss() {self.presentationMode.wrappedValue.dismiss()}
+    
 }
 
-}
 
 
