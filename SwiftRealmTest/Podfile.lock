@@ -1,0 +1,39 @@
+PODS:
+  - Highlightr (2.1.0)
+  - IceCream (1.13.1):
+    - RealmSwift
+  - Realm (4.4.1):
+    - Realm/Headers (= 4.4.1)
+  - Realm/Headers (4.4.1)
+  - RealmSwift (4.4.1):
+    - Realm (= 4.4.1)
+
+DEPENDENCIES:
+  - Highlightr (from `https://github.com/raspu/Highlightr.git`)
+  - IceCream
+  - RealmSwift (~> 4.4.1)
+
+SPEC REPOS:
+  trunk:
+    - IceCream
+    - Realm
+    - RealmSwift
+
+EXTERNAL SOURCES:
+  Highlightr:
+    :git: https://github.com/raspu/Highlightr.git
+
+CHECKOUT OPTIONS:
+  Highlightr:
+    :commit: 87465e7ac116a4c8672fa29aae840e9c9e68bedb
+    :git: https://github.com/raspu/Highlightr.git
+
+SPEC CHECKSUMS:
+  Highlightr: 683f05d5223cade533a78528a35c9f06e4caddf8
+  IceCream: 0447d87b55df85651dd60b15712cef64dbe1cb54
+  Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
+  RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
+
+PODFILE CHECKSUM: 05e2453af45636f9513d769e07519bc2ba93b47d
+
+COCOAPODS: 1.9.3
