@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.registerForRemoteNotifications()
         
-       // CloudDataManager.instance.initDocumentsDirectory()
+        //CloudDataManager.instance.initDocumentsDirectory()
         
         return true
     }
