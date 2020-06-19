@@ -1,12 +1,14 @@
-#SwiftCallbackFromDetailPage
+#SwiftUIRealmIceCreamTest
 
-This example shows an array 'FixedMessagesModel' of items 'fixedMessage' which are composed of several properties (id, title... and so on). The rows are shown in the form of a NavigationLink. Rows can be deleted (swipe to delete) and new rows can be added.
-Additionally there are two buttons on the (child) detail View (Cmd to parent) and (Cmd to grandparent). Pressing the first starts a function on its parent view. Pressing the second leads the command back over the parent view to the grandparent view where a print function is initiated.
-
-
-![Screenshot](https://github.com/RoSchmi/ProgramsXCode/blob/master/SwiftCallbackFromDetailPage/Pictures/SwiftNavigationList.png)
+This example shows the use of the Realm Database on the iPhone to store data persistently.
+IceCream is used to synchronize these data with the iCloud (not tested yet as iCloud access apparently only works with Apps which are tested by Apple for the App Store)
 
 
-![Screenshot](https://github.com/RoSchmi/ProgramsXCode/blob/master/SwiftCallbackFromDetailPage/Pictures/SwiftCallback_2.png)
+
+
+![Screenshot](https://github.com/RoSchmi/ProgramsXCode/blob/master/SwiftUIRealmIceCreamTest/Pictures/RealmIceCreamTest_2.png)
+
+
+![Screenshot](https://github.com/RoSchmi/ProgramsXCode/blob/master/SwiftUIRealmIceCreamTest/Pictures/RealmIceCreamTest_1.png)
 
 
