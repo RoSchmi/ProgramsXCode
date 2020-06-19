@@ -24,17 +24,3 @@ struct RootView_Previews: PreviewProvider {
     }
 }
 
-/*
-import SwiftUI
-import Highlightr
-
-struct RootView: View {
-    @EnvironmentObject var model: RootModel
-
-    var body: some View {
-        VStack {
-            HostsView(hostsModel: model.hostsModel)
-        }
-    }
-}
-*/

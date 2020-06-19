@@ -17,11 +17,14 @@ struct CommandCellView: View {
     @ObservedObject var commandsModel: CommandsModel
      
      var function_on_grandparent: () -> Void
+     var function_on_parent_update: (Command) -> Void
     var body: some View {
         NavigationLink(destination:
             CommandDetailView(command: selectedCommand,
                               commandsModel: self.commandsModel,
-                              function_on_parent: {self.printMessageFromParent()}, function_on_grandparent: {self.handOverCommandToGrandparent()})) {
+                              function_on_parent: {self.printMessageFromParent()},
+                              function_on_grandparent: {self.handOverCommandToGrandparent()},
+                              function_on_parent_update: {self.handOverCommandUpdateToParent(command: $0)})) {
             
                 VStack(alignment: .leading) {
                     HStack {
@@ -38,6 +41,7 @@ struct CommandCellView: View {
         
         func handOverCommandToGrandparent(){ self.function_on_grandparent()}
     
+    func handOverCommandUpdateToParent(command: Command){ self.function_on_parent_update(command)}
 }
 
 

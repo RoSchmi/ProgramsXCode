@@ -12,13 +12,14 @@ struct CommandDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     // Note: here command  is @State
     // on the parent (CellView) it is @ObservedObject
-    // if it were @ObservedObject here too,  we would have  a circle and the App crashes
+    // if it were @ObservedObject here too, would have a circle making the App crash ??
     @State var command: Command
     
     @ObservedObject var commandsModel: CommandsModel
     
     var function_on_parent: () -> Void
     var function_on_grandparent: () -> Void
+    var function_on_parent_update: (Command) -> Void
     
     var body: some View {
         Form {
@@ -57,19 +58,15 @@ struct CommandDetailView: View {
                     Image(systemName: "arrow.left.circle")
                     Text("Go Back")
                 }
-    })
+            })
             Button(action: { self.function_on_parent()}, label: {Text("Cmd to parent")})
                 
             Button(action: { self.function_on_grandparent()}, label: {Text("Cmd to grandparent")})
-        
+        }
     }
-  
-    
-        
-        
-    }
-    func updateAndDismiss() {self.presentationMode.wrappedValue.dismiss()}
-    
+    func updateAndDismiss() {
+        self.function_on_parent_update(command)
+        self.presentationMode.wrappedValue.dismiss()}
 }
 
 

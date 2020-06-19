@@ -34,8 +34,5 @@ class CommandSetting: Object {
 extension CommandSetting: CKRecordConvertible {
 }
 
-
 extension CommandSetting: CKRecordRecoverable {
 }
-
-

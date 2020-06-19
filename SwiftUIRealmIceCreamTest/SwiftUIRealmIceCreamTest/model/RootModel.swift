@@ -17,24 +17,12 @@ class RootModel: ObservableObject {
     
     let sessionController = controller
     
-let commandsModel = CommandsModel(initMethod: controller)
-//let hostsModel = CommandsModel(initMethod: controller)
-let persistence: CommandsModelPersistence
+    let commandsModel = CommandsModel(initMethod: controller)
 
-    init() //{}
+    let persistence: CommandsModelPersistence
 
-{
-    self.persistence = CommandsModelPersistence(model: commandsModel)    //self.persistence = CommandsModelPersistence(model: commandsModel)
-    self.persistence.load()
-    
-    var dummy = "Hallo"
-    
-  
-    /*
-    for command in commandsModel.commands {
-        messageModelByHost[host] = MessageModel()
+    init() {
+        self.persistence = CommandsModelPersistence(model: commandsModel)
+        self.persistence.load()
     }
-    */
-}
-
 }
