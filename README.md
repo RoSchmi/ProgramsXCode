@@ -1,7 +1,7 @@
 # ProgramsXCode
 
 This repo is mainly for personal use. 
-It shows some examples I tested to be uses in my projects. 
+It shows some examples I tested to be used in my projects. 
 Should be only of limited use for others
 
 ### SwiftCallbackFromDetailPage
@@ -15,5 +15,5 @@ a function on its parent view. Pressing the second leads the command back over t
 Pressing a Button on the Child View starts a print function on the parent view, passes two string parameter
 
 ### SwiftUIRealmIceCreamTest
-This example shows the use of the Realm Database on the iPhone to store data persistently.
+This example shows the use of the Realm Database in a SwiftUI App on the iPhone to store data persistently.
 IceCream is used to synchronize these data with the iCloud (not tested yet as iCloud access apparently only works with Apps which are tested by Apple for the App Store)
