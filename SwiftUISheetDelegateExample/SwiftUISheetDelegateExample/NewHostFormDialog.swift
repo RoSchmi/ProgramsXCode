@@ -57,6 +57,7 @@ struct NewHostFormModalView: View {
 		}
 	}
     
+    // function on parent
 	func cancel() {
 		closeHandler()
 	}
